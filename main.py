@@ -1,15 +1,22 @@
 from flask import Flask, render_template, url_for
 from flaskext.mysql import MySQL
+import base64
 
 
 app = Flask(__name__)
 mysql = MySQL()
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'trackrsweb'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_USER'] = 'sql6427929'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'NjIEsy1LN5'
+app.config['MYSQL_DATABASE_DB'] = 'sql6427929'
+app.config['MYSQL_DATABASE_HOST'] = 'sql6.freemysqlhosting.net'
+
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_DATABASE_PASSWORD'] = ''
+# app.config['MYSQL_DATABASE_DB'] = 'trackrsweb'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+
 mysql.init_app(app)
 conn = mysql.connect()
 cursor = conn.cursor()
